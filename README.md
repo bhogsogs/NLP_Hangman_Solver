@@ -17,6 +17,6 @@ For the first alphabet, our model will make the guess based on the letter freque
 Once the first alphabet has been correctly guessed, our model calculates the possible 2-grams starting with this alphabet, and picks the most frequent one. If the model is unable to find a matched 2-gram, this is where the language model comes into play. Our LSTM Model, trained on a Masked Language Modeling Task, is used to make predictions. Essentially, we constructed an LSTM model with 3 layers trained on a masked language modeling task on the training corpus. We use this if model to make predictions  we are unable to find any valid 2-gram. The input to the model is the soft-encoded form of the currently “masked” hangman word, and it generates a character index as the output, from which the character is retrieved using a hash dictionary.
 
 <p align="center">
-   <img src="https://github.com/mbappeenjoyer/NLP_Hangman_Player/assets/134948011/91873cd9-c7b5-4cf0-b940-5c419fb062cd" width=600 height=400>
+   <img src="https://github.com/mbappeenjoyer/NLP_Hangman_Player/assets/134948011/91873cd9-c7b5-4cf0-b940-5c419fb062cd" width=900 height=300>
 </p>
 
