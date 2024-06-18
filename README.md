@@ -8,13 +8,8 @@ Hangman consists of essentially four main steps, Word Selection, Displaying Hidd
 
 The dataset provided to us consisted of 50,000 english words, and we were not allowed to incorporate any other data source in our model training procedure. It is important to note that as a baseline, the statistical modeling approach is able to achieve an accuracy of 18% while simulating this game.
 
-# Approach
+# Approach (MLM 2-Gram Model)
 
-## Approach 1
-
-The initial approach involved training a reinforcement learning (RL) agent in a custom Hangman environment where it learned to predict letters to guess. The Hangman environment, managed by a Python script, defined game parameters and interactions, enabling players to guess letters and update game states. The neural network model, structured with embedding layers and dense networks, processed state and guessed letter information to make predictions. An NNAgent class, inheriting from a base agent, facilitated decision-making using this model. Training iteratively refined the agent's policy through interactions, while evaluation gauged performance metrics like correct guesses and losses. The 'your_solution' file utilized a pre-trained policy_network model, adapting the NNAgent for gameplay suggestions, promoting efficient policy application in real-world scenarios.
-
-## Approach 2
 This model is essentially a combination of a statistical and a language model. Essentially, we observed that making the first prediction accurately with solely a language model can lead to low accuracy value, at the same time, relying on the frequency values of alphabets at the initial stages can prove to enhance the accuracy of our model. Keeping this in mind, we adopted a two step approach:-
 
 For the first alphabet, our model will make the guess based on the letter frequency in the set of all the words of the same length in the training set. This step will keep going on until the algorithm has made a valid guess.
@@ -26,7 +21,5 @@ Once the first alphabet has been correctly guessed, our model calculates the pos
 </p>
 
 # Results
-
-The RL model achieved an accuracy of 19.2% on an eval set consisting of 5k words from the training corpus. The was trained with 2300 episodes on the training set provided. Due to small dataset and less number of episodes the accuracy was not very well but significant improvement can be done otherwise.
 
 The MLM-2-Gram model achieved an accuracy of 93.62% on an eval set consisting of 5k words from the training corpus. The LSTM model was pretrained on a masked language modeling task, where it achieved a best case Cross Entropy Loss Score of 3.21 after running for 500 epochs. 
