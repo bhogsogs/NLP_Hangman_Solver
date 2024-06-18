@@ -10,6 +10,10 @@ The dataset provided to us consisted of 50,000 english words, and we were not al
 
 # Approach
 
+- Approach 2
+
+
+- Approach 1.
 This model is essentially a combination of a statistical and a language model. Essentially, we observed that making the first prediction accurately with solely a language model can lead to low accuracy value, at the same time, relying on the frequency values of alphabets at the initial stages can prove to enhance the accuracy of our model. Keeping this in mind, we adopted a two step approach:-
 
 For the first alphabet, our model will make the guess based on the letter frequency in the set of all the words of the same length in the training set. This step will keep going on until the algorithm has made a valid guess.
@@ -20,3 +24,8 @@ Once the first alphabet has been correctly guessed, our model calculates the pos
    <img src="https://github.com/mbappeenjoyer/NLP_Hangman_Player/assets/134948011/91873cd9-c7b5-4cf0-b940-5c419fb062cd" width=900 height=300>
 </p>
 
+# Results
+
+The RL model achieved an accuracy of 19.2% on an eval set consisting of 5k words from the training corpus. The was trained with 2300 episodes on the training set provided. Due to small dataset and less number of episodes the accuracy was not very well but significant improvement can be done otherwise.
+
+The MLM-2-Gram model achieved an accuracy of 93.62% on an eval set consisting of 5k words from the training corpus. The LSTM model was pretrained on a masked language modeling task, where it achieved a best case Cross Entropy Loss Score of 3.21 after running for 500 epochs. 
