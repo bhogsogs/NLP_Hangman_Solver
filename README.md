@@ -1,4 +1,4 @@
-# NLP_Hangman_Player
+# Hangman Player
 
 # Introduction
 
