@@ -22,4 +22,4 @@ Once the first alphabet has been correctly guessed, our model calculates the pos
 
 # Results
 
-The MLM-2-Gram model achieved an accuracy of 93.62% on an eval set consisting of 5k words from the training corpus. The LSTM model was pretrained on a masked language modeling task, where it achieved a best case Cross Entropy Loss Score of 3.21 after running for 500 epochs. 
+The MLM-2-Gram model achieved an impressive accuracy of 93.62% on an evaluation set comprising 5,000 words from the training corpus. The LSTM model was pretrained on a masked language modeling task, where it achieved a best case Cross Entropy Loss Score of 3.21 after running for 500 epochs. However, on a more challenging test set of 50,000 words, the model's accuracy was 43.52%.  
