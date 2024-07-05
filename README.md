@@ -1,4 +1,4 @@
-# Hangman Player
+# Hangman Solver
 
 # Introduction
 
